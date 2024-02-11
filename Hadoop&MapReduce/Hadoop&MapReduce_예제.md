@@ -6,9 +6,9 @@ MapReduce 기본 예제를 실행 해 보았습니다.
 먼저 아래의 명령어로 파일을 생성 후에 진행합니다.
 
 ```
-bin/hdfs dfs -mkdir/user
-bin/hdfs dfs -mkdir/user/atimaby28
-bin/hdfs dfs -mkdir/user/atimaby28/input
+bin/hdfs dfs -mkdir /user
+bin/hdfs dfs -mkdir /user/atimaby28
+bin/hdfs dfs -mkdir /user/atimaby28/input
 ```
 ![](./image/MapReduce-1.png)
 
