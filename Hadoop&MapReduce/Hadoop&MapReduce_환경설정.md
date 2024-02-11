@@ -121,6 +121,11 @@ java -version
 wget https://downloads.apache.org/hadoop/common/hadoop-3.6.6/hadoop-3.6.6.tar.gz 
 ```
 
+파일 이름도 변경해 줍니다.
+```
+mv hadoop-3.3.6 hadoop
+```
+
 ![](./image/Hadoop-9.png)
 
 다음 코드를 추가하여 통해 환경설정을 수정해 줍니다.
@@ -130,7 +135,7 @@ vim /hadoop/etc/hadoop/hadoop-env.sh
 
 ```
 ```
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_271
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_392
 ```
 ![](./image/Hadoop-10.png)
 
@@ -244,9 +249,12 @@ vim /hadoop/etc/hadoop/yarn-site.xml
 ![](./image/Hadoop-15.png)
 
 다음 코드를 추가하여 통해 환경설정을 수정해 줍니다.
+```
+cd ~
+```
 
 ```
-vim /hadoop/etc/hadoop/yarn-site.xml
+vim .bashrc
 ```
 
 
@@ -269,7 +277,7 @@ export YARN_HOME=${HADOOP_HOME}
 ![](./image/Hadoop-16.png)
 
 ```
-‘bin/hdfs namenode -format’ or sbin/start-dfs.sh
+bin/hdfs namenode -format and sbin/start-dfs.sh
 ```
 
 ![](./image/Hadoop-17.png)
