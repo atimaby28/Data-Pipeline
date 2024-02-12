@@ -1,40 +1,27 @@
-MapReduce 기본 예제를 실행 해 보았습니다.
+airbnb 예제를 HDFS와 Pyspark를 통해 해겷해보는 예제입니다.
 
 # 기본 설정
 
 
-먼저 아래의 명령어로 파일을 생성 후에 진행합니다.
+다음 명령어를 통해 데몬을 모두 실행시켜 줍니다.
 
 ```
-bin/hdfs dfs -mkdir/user
-bin/hdfs dfs -mkdir/user/atimaby28
-bin/hdfs dfs -mkdir/user/atimaby28/input
+sbin/start-all.sh
 ```
-![](./image/MapReduce-1.png)
 
-다음 명령어를 통해 실행해 줍니다.
+![](./image/PysparkHDFS-1.png)
+
+다음 명령어를 통해 HDFS에 올려줍니다.
 ```
-hdfs dfs -put NOTICE.txt /user/atimaby28/input
+bin/hdfs dfs -put ~/pyspark_example/data/airbnb.csv airbnb_data.csv
 ```
-![](./image/MapReduce-2.png)
+![](./image/PysparkHDFS-2.png)
 
+jupyter notebook에서 실행한 output_df2 파일이 올라간 것을 확인했고,
 
-다음 명령어를 통해 실행해 줍니다.
-```
-hadoop jar /home/atimaby28/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.6.6.jar wordcount input output
-```
-![](./image/MapReduce-3.png)
+![](./image/PysparkHDFS-3.png)
 
-MapReduce 작업이 끝난 화면입니다.
+이것을 다시 로컬 환경으로 가져왔습니다.
 
-![](./image/MapReduce-4.png)
+![](./image/PysparkHDFS-4.png)
 
-![](./image/MapReduce-5.png)
-
-UI 환경으로 하둡을 확인해 보았습니다.
-
-![](./image/MapReduce-6.png)
-
-![](./image/MapReduce-7.png)
-
-결과는 ./result에 저정했습니다.
